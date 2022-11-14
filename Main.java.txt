@@ -1,29 +1,146 @@
-/*
-* Name : Justin M. Parba
+/**
+* Name: Justin M. Parba
 * Section: Devotion
-* Year : 4th 
+* Year: 4th year
 */
 
 import java.util.Scanner;
-public class Main {
-	public static void main(String[]args) {
-		Scanner myInput=new Scanner(System.in);
-		int Grade=1;
-		int total=0;
-		int rep=0;
+public class Store {
+
+      public static void main(String[] args) {
+      Scanner in = new Scanner(System.in);
+	
+      int choice, food, snacks, beverages, category, price, total = 0;
+	
+    do{
+      System.out.println("+=================================+"); 
+      System.out.println("Welcome to Jollibee ");
+      System.out.println("+=================================+");
+      System.out.println("Do you want to order?");
+      System.out.println("1-Yes\n2-No: ");
+             choice = in.nextInt();
+
+      System.out.println("+=================================+"); 
+		System.out.println(" JOLLIBEE FOOD MENU: ");
+		System.out.println(" ");
+		System.out.println("[1] - Longganisa-149.00");
+		System.out.println("[2] - Beef Tapa-149.00 ");
+		System.out.println("[3] - Corned Beef-149 ");
+      System.out.println("[4] - Breakfast Chickenjoy-201.00 ");
+      System.out.println("[5] - Breakfast Burger Steak-106.00");
+		System.out.print("Choose your order: ");
+				food = in.nextInt();
+				System.out.println(" ");
 		
-		while(Grade==1){
-		    System.out.print("Enter a Grade:");
-		    int grade=myInput.nextInt();
-		    
-		    total+=grade;
-		    rep+=Grade;
-		    
-		    System.out.println("Do you want to enter another grade?\n[1]YES[2]NO:");
-		    Grade=myInput.nextInt();
-		    
-		}
-		total=total/rep;
-		System.out.print("AVERAGE:" + total);
-    }	
+		System.out.println("+=================================+"); 
+		System.out.println(" JOLLIBEE SNACKS MENU ");
+		System.out.println(" ");
+		System.out.println("[1] - Chocolate Sundae Twirl-48.00");
+		System.out.println("[2] - Buko Pie-48.00");
+		System.out.println("[3] - Peach Mango Pie-43.00");
+      System.out.println("[4] - Ube Cheese Pie Solo-38.00");
+      System.out.println("[5] - Assorted Dozen Pies To Go-403.00 ");
+		System.out.print("Choose your order: ");
+				snacks = in.nextInt();
+				System.out.println(" ");
+			
+		System.out.println("+=================================+");
+		System.out.println("JOLLIBEE BEVERAGES : ");
+		System.out.println(" ");
+		System.out.println("[1] - Coke-53.00 ");
+		System.out.println("[2] - Royal-53.00 "); 
+		System.out.println("[3] - Sprite-53.00 ");
+      System.out.println("[4] - Coffee-43.00 ");
+      System.out.println("[5] - Chocolate-48.00 ");
+		System.out.println(" ");
+		System.out.print("Choose your order: ");
+				beverages = in.nextInt();
+				System.out.println(" ");
+		
+		if(food == 1){
+			    price = 149;
+			    total = price + total;
+			   System.out.println(" You ordered: Longganisa"+" - "+price);
+            
+		} else if (food == 2){
+			   price = 149;
+			   total = price + total;
+			   System.out.println(" You ordered: Beef Tapa"+" - "+price);	
+            
+		} else if (food == 3){
+			   price = 149;
+			   total = price + total;
+			   System.out.println(" You ordered: Corned Beef"+" - "+price);
+            
+     } else if (food == 4){
+			   price = 201;
+			   total = price + total;
+			   System.out.println(" You ordered: Breakfast Chickenjoy"+" - "+price);
+            
+      } else if (food == 5){
+			   price = 106;
+			   total = price + total;
+			   System.out.println(" You ordered: Breakfast Burger Steak"+" - "+price);
+	} 
+
+		if (snacks == 1){
+			  price = 48;
+		     total = price + total;
+			  System.out.println(" You ordered: Chocolate Sundae Twirl"+" - "+price);	
+		} else if (snacks == 2){
+			  price = 48;
+			  total = price + total;
+			  System.out.println(" You ordered: Buko Pie"+" - "+price);	
+           
+		} else if (snacks == 3){
+			  price = 43;
+		     total = price + total;
+			  System.out.println(" You ordered: Peach Mango Pie"+" - "+price);	
+         
+      } else if (snacks == 4){
+			  price = 38;
+			  total = price + total;
+			  System.out.println(" You ordered: Ube Cheese Pie Solo"+" - "+price);	
+          
+       } else if (snacks == 5){
+			  price = 403;
+			  total = price + total;
+			  System.out.println(" You ordered: Assorted Dozen Pies To Go"+" - "+price);
+	}
+   
+		if (beverages == 1){
+			  price = 53;
+			  total = price + total;
+			  System.out.println(" You ordered: Coke"+" - "+price);	
+         
+	    } else if (beverages == 2){
+			  price = 53;
+			  total = price + total;
+			  System.out.println(" You ordered: Royal"+" - "+price);	
+         
+	    } else if (beverages == 3){
+			  price = 53;
+			  total = price + total;
+			  System.out.println(" You ordered: Sprite "+" - "+price);
+         
+	     } else if (beverages == 4){
+			  price = 43;
+			  total = price + total;
+			  System.out.println(" You ordered: Coffee"+" - "+price);
+         
+         } else if (beverages == 5){
+			  price = 48;
+			  total = price + total;
+			 System.out.println(" You ordered: Chocolate "+" - "+price);
+	}
+	System.out.println("+=================================+");
+	System.out.println(" ");
+	System.out.println("Total Price: "+total);
+	System.out.println(" ");
+	System.out.print("THANK YOU AND COME AGAIN ");
+		category= in.nextInt();
+		
+		}while(category == 1);
+		
+     }
 }
